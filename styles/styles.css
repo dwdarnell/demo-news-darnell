@@ -323,3 +323,72 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+/* ===== PASTE THIS BLOCK AT THE BOTTOM of styles/styles.css ===== */
+/* No @import needed: the scrape didn't name a font, so this theme uses Roboto,
+   which the boilerplate already loads locally (fonts/). Substitution, not the brand font. */
+/* Inside Halton demo theme - generated from https://www.insidehalton.com/ on 2026-11-17. Demo use only. */
+:root {
+  --background-color: #F6F6F6;   /* page background (scraped body bg) */
+  --light-color: #FFFFFF;        /* panel background (section style "highlight") */
+  --dark-color: #333333;
+  --text-color: #333333;         /* scraped body text */
+  --link-color: #006633;         /* scraped link + CTA green */
+  --link-hover-color: #2A6438;   /* scraped secondary button green */
+  --body-font-family: roboto, roboto-fallback, arial, sans-serif;
+  --heading-font-family: roboto, roboto-fallback, arial, sans-serif;
+  --brand-primary: #006633;
+  --brand-secondary: #2A6438;
+  --brand-accent: #4DA337;       /* logo green */
+}
+
+body { background-color: var(--background-color); color: var(--text-color); }
+main h1, main h2, main h3, main h4 { font-family: var(--heading-font-family); font-weight: 700; color: #333333; }
+main h1 { font-size: 28px; line-height: 1.25; margin-top: 24px; }
+
+/* header / nav - white masthead, charcoal text, green accent rule */
+header .nav-wrapper { background-color: #FFFFFF; border-bottom: 3px solid var(--brand-primary); }
+header nav, header nav a:any-link { color: #333333; }
+header nav .nav-sections a:hover { color: var(--brand-primary); }
+header nav .nav-brand img { max-height: 40px; width: auto; }
+
+/* buttons - green filled */
+main a.button:any-link, main button {
+  background-color: var(--brand-primary); color: #FFFFFF;
+  border-radius: 4px; font-family: var(--body-font-family); font-weight: 700;
+}
+main a.button:hover, main a.button:focus, main button:hover { background-color: var(--link-hover-color); }
+main a.button.secondary { background-color: transparent; color: var(--brand-primary); border: 2px solid currentcolor; }
+
+/* section headings - newspaper module bar */
+main .section > div > h2 {
+  font-size: 22px; text-transform: none; padding-left: 12px;
+  border-left: 5px solid var(--brand-primary); margin-bottom: 16px;
+}
+
+/* lead story (columns block) */
+main .columns > div { gap: 24px; align-items: flex-start; }
+main .columns h2, main .columns h3 { font-size: 30px; line-height: 1.2; }
+main .columns img { border-radius: 4px; }
+
+/* cards - white news cards on grey */
+main .cards > ul > li {
+  border: 1px solid rgb(51 51 51 / 15%); border-radius: 4px; overflow: hidden;
+  background: #FFFFFF; box-shadow: none;
+}
+main .cards .cards-card-body h3 { font-size: 18px; line-height: 1.3; color: #333333; }
+main .cards .cards-card-body h3 a:any-link { color: #333333; }
+main .cards .cards-card-body h3 a:hover { color: var(--brand-primary); }
+main .cards .cards-card-body p { font-size: 16px; }
+main .cards .cards-card-image img { aspect-ratio: 3 / 2; object-fit: cover; }
+
+/* sections */
+main .section.highlight { background-color: var(--light-color); }
+main .section.dark { background-color: var(--brand-primary); color: #FFFFFF; }
+main .section.dark h2, main .section.dark h3, main .section.dark p, main .section.dark a:any-link { color: #FFFFFF; }
+main .section.dark > div > h2 { border-left-color: #FFFFFF; }
+main .section.dark a.button:any-link { background-color: #FFFFFF; color: var(--brand-primary); }
+
+/* footer - dark charcoal */
+footer { background-color: #333333; color: #FFFFFF; }
+footer a:any-link { color: #FFFFFF; }
+footer a:hover { color: var(--brand-accent); }
